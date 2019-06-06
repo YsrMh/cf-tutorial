@@ -29,7 +29,7 @@ Download the app with `git clone`.
 
 If you don't have Git installed, you can download a zip file of the app available here:
 
-	https://github.com/YsrMh/cf-tutorial/tree/master/cf-sample-app-spring-master
+	https://github.com/YsrMh/spring-music
 	
 Navigate to the app directory:
 
