@@ -23,24 +23,37 @@ You can use the cf CLI to perform all commands on apps deployed to PCF.
 
 Now that you have the cf CLI installed and a Pivotal Web Services (PWS) account, you are really close to deploying the sample app.
 This sample app is built with Spring Boot to get you up and running as quickly as possible.
-Download the app with git: git clone 
-If you don't have Git installed, you can download a zip file of the app available here: https://github.com/YsrMh/cf-tutorial/tree/master/cf-sample-app-spring-master
+Download the app with git: `git clone` 
+If you don't have Git installed, you can download a zip file of the app available here:
+	https://github.com/YsrMh/cf-tutorial/tree/master/cf-sample-app-spring-master
 Navigate to the app directory:
-`cd cf-sample-app-spring`
+
+`cd cf-sample-app-spring` 
+ 
 Sign in to PWS:
+
 `cf login -a https://api.run.pivotal.io`
+
 Push the app to PWS:
+
 `cf push`
+
 Open the sample app in your browser.
 
 ## 3. View the Logs
 
 View a snapshot of recent logs:
+
 `cf logs cf-demo --recent`
+
 Or, stream live logs:
+
 `cf logs cf-demo`
+
 PCF provides access to an aggregated view of logs related to your application. This includes HTTP access logs, as well as output from app operations such as scaling, restarting, and restaging.
+
 Every log line contains four fields:
+
 	- Timestamp
 	- Log type
 	- Channel
@@ -52,16 +65,27 @@ Press Control C to stop streaming.
 ## 4. Connect a Database
 
 PCF enables administrators to provide a variety of services on the platform that can easily be consumed by applications.
+
 List the available ElephantSQL plans:
+
 `cf marketplace -s elephantsql`
+
 Create a service instance with the free plan:
+
 `cf create-service elephantsql turtle cf-demo-db`
+
 Bind the newly created service to the app:
+
 `cf bind-service cf-demo cf-demo-db`
-Once a service is bound to an app, environment variables are stored that allow the app to connect to the service after a push, restage, or restart command.
+
+Once a service is bound to an app, environment variables are stored that allow the app to connect to the service after a `push`, `restage`, or `restart` command.
+
 Restage the app:
+
 `cf restage cf-demo`
+
 Verify the new service is bound to the app:
+
 `cf services`
 
 ## 5. Scale the App
@@ -70,14 +94,23 @@ Increasing the available disk space or memory can improve overall app performanc
 Scaling your app horizontally adds or removes app instances. Adding more instances allows your application to handle increased traffic and demand.
 
 Horizontal scaling increases the number of app instances to handle increased demand.
+
 Increase the number of app instances from one to two:
+
 `cf scale cf-demo -i 2`
+
 Check the status of the app and verify there are two instances running:
+
 `cf app cf-demo`
+
 Scaling your app vertically changes the disk space limit or memory limit for each app instance.
+
 Increase the memory limit for each app instance:
+
 `cf scale cf-demo -m 1G`
+
 Decrease the disk limit for each app instance:
+
 `cf scale cf-demo -k 512M`
 
 ## Next Steps
