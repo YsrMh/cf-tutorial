@@ -7,7 +7,7 @@ Ensure you have:
 	- a free Pivotal Web Services account: https://try.run.pivotal.io/gettingstarted
 	- familiarity with command line interfaces
 
-## Install the CF CLI
+## 1. Install the CF CLI
 
 Download and install the Cloud Foundry Command Line Interface (cf CLI):
 
@@ -19,7 +19,7 @@ Try the following command to test that the cf CLI works:
 
 You can use the cf CLI to perform all commands on apps deployed to PCF.
 
-## Deploy the Sample App
+## 2. Deploy the Sample App
 
 Now that you have the cf CLI installed and a Pivotal Web Services (PWS) account, you are really close to deploying the sample app.
 This sample app is built with Spring Boot to get you up and running as quickly as possible.
@@ -33,7 +33,7 @@ Push the app to PWS:
 `cf push`
 Open the sample app in your browser.
 
-## View the Logs
+## 3. View the Logs
 
 View a snapshot of recent logs:
 `cf logs cf-demo --recent`
@@ -49,7 +49,7 @@ Every log line contains four fields:
 
 Press Control C to stop streaming.
 
-## Connect a Database
+## 4. Connect a Database
 
 PCF enables administrators to provide a variety of services on the platform that can easily be consumed by applications.
 List the available ElephantSQL plans:
@@ -64,7 +64,7 @@ Restage the app:
 Verify the new service is bound to the app:
 `cf services`
 
-## Scale the App
+## 5. Scale the App
 
 Increasing the available disk space or memory can improve overall app performance. Similarly, running additional instances of an app can allow an app to handle increases in user load and concurrent requests. These adjustments are called scaling.
 Scaling your app horizontally adds or removes app instances. Adding more instances allows your application to handle increased traffic and demand.
