@@ -23,9 +23,12 @@ You can use the cf CLI to perform all commands on apps deployed to PCF.
 
 Now that you have the cf CLI installed and a Pivotal Web Services (PWS) account, you are really close to deploying the sample app.
 This sample app is built with Spring Boot to get you up and running as quickly as possible.
-Download the app with git: `git clone` 
+Download the app with `git clone`.
+
 If you don't have Git installed, you can download a zip file of the app available here:
+
 	https://github.com/YsrMh/cf-tutorial/tree/master/cf-sample-app-spring-master
+	
 Navigate to the app directory:
 
 `cd cf-sample-app-spring` 
