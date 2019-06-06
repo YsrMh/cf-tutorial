@@ -5,10 +5,9 @@ Use this tutorial to get a sample app up and running on Pivotal Cloud Foundry (P
 Ensure you have:
 	
 	- a free Pivotal Web Services account: 
-	
-	https://try.run.pivotal.io/gettingstarted
-	
 	- familiarity with command line interfaces
+
+a free account could be created here : https://try.run.pivotal.io/gettingstarted
 
 ## 1. Install the CF CLI
 
