@@ -43,7 +43,7 @@ Push the app to PWS:
 
 `cf push`
 
-Open the sample app in your browser.
+Open the sample app in your browser. TIPS: you will find the URL of your app after performing this command: `cf apps`
 
 ## 3. View the Logs
 
